@@ -10,8 +10,17 @@ import MicIcon from "@material-ui/icons/Mic";
 import HeadsetIcon from "@material-ui/icons/Headset";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { Avatar } from "@material-ui/core";
+import { selectUser } from "./features/userSlice";
+import { useSelector } from "react-redux";
+import { auth } from "./firebase";
 
 function Sidebar() {
+  const user = useSelector(selectUser);
+
+  const UserSignOut = () => {
+    console.log("trying to sign out");
+    auth.signOut();
+  };
   return (
     <div className='sidebar'>
       <div className='sidebar__top'>
@@ -51,10 +60,10 @@ function Sidebar() {
       </div>
 
       <div className='sidebar__profile'>
-        <Avatar src='https://avatars3.githubusercontent.com/u/29734311?s=460&u=274a33580eb38664d714c0b208536540a9046f30&v=4' />
+        <Avatar onClick={UserSignOut} src={user.photo} />
         <div className='sidebar__profileInfo'>
-          <h3>@Kaustubh285</h3>
-          <p>#shieldHero</p>
+          <h3>@{user.displayName}</h3>
+          <p>#{user.uid.substring(0, 8)}</p>
         </div>
 
         <div className='sidebar__profileIcons'>
