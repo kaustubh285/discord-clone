@@ -24,3 +24,12 @@
   border: 1px solid #738adb;
   color: #738adb;
 }
+
+.login__logo > h1 {
+  color: white;
+  font-family: monospace;
+  padding-top: 20px;
+  padding-left: 3px;
+  font-size: 40px;
+  text-shadow: 3px 1px #738adb;
+}
