@@ -14,3 +14,42 @@
   font-size: 30px;
   padding: 8px;
 }
+
+.sidebar__voice,
+.sidebar__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  padding: 10px;
+  border-top: 1px solid grey;
+}
+
+.sidebar__voiceInfo {
+  flex: 1;
+  padding: 10px;
+}
+
+.sidebar__voiceInfo > h3 {
+  color: #4fb185;
+}
+.sidebar__voiceIcon {
+  color: #4fb185;
+}
+
+.sidebar__voiceCallIcons > .MuiSvgIcon-root {
+  padding: 10px;
+}
+
+.sidebar__profileInfo {
+  padding: 10px;
+  flex: 1;
+}
+
+.sidebar__profileInfo > h3 {
+  color: white;
+}
+
+.sidebar__profileIcons > .MuiSvgIcon-root {
+  padding: 5px;
+}
